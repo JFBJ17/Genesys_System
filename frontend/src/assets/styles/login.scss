@@ -1,0 +1,18 @@
+.login-container {
+  display: flex;
+  height: calc(100vh - 90px);
+
+  .picture {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+  }
+  @for $i from 1 through 3 {
+    .background_#{$i} {
+      background: url(../img/background_#{$i}.jpg);
+    }
+  }
+  .login {
+    flex: 1;
+  }
+}
