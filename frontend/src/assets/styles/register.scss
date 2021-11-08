@@ -1,9 +1,9 @@
 .register-container {
   position: relative;
+  top: calc(50vh - 420px);
   left: calc(50vw - 240px);
-  top: 30px;
   width: 480px;
-  height: 750px;
+  height: 760px;
   overflow: hidden;
   background: #363636;
   border-radius: 10px;
@@ -18,6 +18,7 @@
     z-index: 1;
 
     h2 {
+      margin: 50px 0 30px;
       text-align: center;
       font-size: 60px;
       font-weight: 700;
@@ -34,7 +35,7 @@
         width: 80%;
         height: 52px;
         padding: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         .icon {
           position: absolute;
           top: 18px;
@@ -54,7 +55,7 @@
         }
       }
       button {
-        margin: 50px 0 20px;
+        margin: 70px 0 30px;
         width: 300px;
         height: 40px;
         background: #2da067;
@@ -62,6 +63,7 @@
         border: none;
         border-radius: 8px;
         color: #f0f0f0;
+        cursor: pointer;
       }
     }
     p {

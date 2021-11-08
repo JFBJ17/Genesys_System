@@ -12,8 +12,12 @@ const Navbar = () => {
         <img className='logo' src={logoIcon} alt='logo de Genesys' />
       </Link>
       <ul>
-        <li>Iniciar Sesión</li>
-        <li>Registrarse</li>
+        <li className='link'>
+          <Link to='/login'>Iniciar Sesión</Link>
+        </li>
+        <li className='link'>
+          <Link to='/register'>Registrarse</Link>
+        </li>
       </ul>
     </header>
   );
