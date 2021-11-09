@@ -13,6 +13,7 @@ import Navbar from '../components/Navbar';
 
 //Style
 import '../assets/styles/index.scss';
+import LayoutClient from '../partials/LayoutClient';
 
 const App = () => {
   return (
@@ -23,7 +24,12 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotFound />} />
-        <Route path='/ReporteCompras' element={<ReporteCompras/>}></Route>
+        <Route path='/ReporteCompras' element={
+          <LayoutClient>
+            <ReporteCompras />
+          </LayoutClient>
+        }
+        />
       </Routes>
     </BrowserRouter>
   );
