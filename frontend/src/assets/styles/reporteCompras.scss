@@ -1,0 +1,37 @@
+
+
+
+    a {
+        text-decoration: none;
+        color: #2c5282;
+    }
+    .container-dir{
+        margin: 50px 50px 0 0;
+    }
+    .container-reporte{
+        margin: 40px 0 0 0;
+    }
+    .container-button__download{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-wrap: wrap;
+        padding: 3rem;
+    }
+    button {
+        margin: 10px 0;
+        padding: 10px 5px;
+        width: 30vh;
+        height: 50px;
+        background: var(--verde_claro);
+        font-size: 20px;
+        border: none;
+        border-radius: 4px;
+        color: #ffffff;
+    }
+    .history{
+        background-color: #fdffff;
+        height: 80vh;
+        width: 92vw;
+        border: var(--verde_claro) 2px solid;
+    }
