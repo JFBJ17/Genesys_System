@@ -19,7 +19,7 @@ const ReporteCompras = () => {
                     Reporte de Compras
                 </h3>
                 <div className="container-fluid history mt-5">
-
+                    Contenido
                 </div>
                 <div className="container-button__download">
                     <button type="submit">
