@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import '../assets/styles/reporteCompras.scss';
 import { BsFillCartFill } from "react-icons/bs";
 
@@ -6,16 +7,16 @@ const ReporteCompras = () => {
     return (
         <>
             <div className="container-dir d-flex flex-row justify-content-end align-items-center p-3">
-                <a href="/ReporteCompras">
+                <Link to="/ReporteCompras">
                     <h5 className="me-2 my-auto">
                         Inicio /
                     </h5>
-                </a>
-                <a href="/ReporteCompras">
+                </Link>
+                <Link to="/ReporteCompras">
                     <h5 className="me-2 my-auto text-decoration-underline">
                         Reporte de Compras
                     </h5>
-                </a>
+                </Link>
                 <a href="/ReporteCompras">
                 <BsFillCartFill className="fs-3"></BsFillCartFill>
                 </a>
