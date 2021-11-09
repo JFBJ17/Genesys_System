@@ -2,9 +2,19 @@
   margin: 0;
   padding: 0;
 }
+body > #root {
+  height: 100vh;
+}
+.align-box {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,  'Roboto','Segoe UI',
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;

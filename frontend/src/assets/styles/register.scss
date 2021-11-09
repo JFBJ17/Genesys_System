@@ -1,9 +1,10 @@
 .register-container {
   position: relative;
-  top: calc(50vh - 420px);
-  left: calc(50vw - 240px);
+  margin: auto;
   width: 480px;
-  height: 760px;
+  height: 80%;
+  min-height: 480px;
+  max-height: 700px;
   overflow: hidden;
   background: #363636;
   border-radius: 10px;
