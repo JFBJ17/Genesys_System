@@ -11,7 +11,7 @@
 
   @for $i from 1 through 3 {
     .background_#{$i} {
-      background: url(../img/background_#{$i}.jpg);
+      background: url(../img/background_#{$i}.png);
       background-size: cover;
       background-repeat: no-repeat;
     }

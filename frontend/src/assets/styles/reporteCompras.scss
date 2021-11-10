@@ -1,9 +1,10 @@
 a {
   text-decoration: none;
   color: #000000;
-}
-a:hover {
-  color: #2c5282;
+
+  &:hover {
+    color: #2c5282;
+  }
 }
 .container-dir {
   margin: 50px 50px 0 0;

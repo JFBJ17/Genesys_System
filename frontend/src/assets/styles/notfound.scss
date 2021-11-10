@@ -1,0 +1,19 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+
+  .not-found-title {
+    font-size: 150px;
+    margin: 5px 20px;
+    text-shadow: 1px 1px 0 #bcbcbc;
+  }
+
+  .not-found-text {
+    font-size: 20px;
+    margin: 5px 20px;
+    text-shadow: 1px 1px 0 #bcbcbc;
+  }
+}

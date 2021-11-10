@@ -1,7 +1,7 @@
-:root{
-  --verde_claro:#04c35c;
-  --azul_fosforescente:#291CB4;
-  --azul_oscuro:#110D3D;
+:root {
+  --verde_claro: #04c35c;
+  --azul_fosforescente: #291cb4;
+  --azul_oscuro: #110d3d;
 }
 
 * {
@@ -48,7 +48,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--azul_oscuro);
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
