@@ -42,7 +42,7 @@ const Login = () => {
             <button type='submit'>Iniciar Sesión</button>
           </form>
           <button type='button' className='google'>
-            <FcGoogle /> O Iniciar Sesión con google
+            <FcGoogle /> Iniciar Sesión con google
           </button>
           <p className='not-singed-up'>
             ¿No tiene una cuenta?{' '}

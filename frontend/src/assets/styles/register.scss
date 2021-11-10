@@ -3,7 +3,7 @@
   margin: auto;
   width: 480px;
   height: 80%;
-  min-height: 480px;
+  min-height: 240px;
   max-height: 700px;
   overflow: hidden;
   background: #363636;
@@ -17,6 +17,14 @@
     left: 0;
     background: none;
     z-index: 1;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #7e7e80;
+      border-radius: 100px;
+    }
 
     h2 {
       margin: 50px 0 30px;
@@ -60,6 +68,7 @@
         width: 300px;
         height: 40px;
         background: #2da067;
+        line-height: 20px;
         font-size: 20px;
         border: none;
         border-radius: 8px;
