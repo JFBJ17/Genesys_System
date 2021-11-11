@@ -94,3 +94,28 @@
     background: #404040;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .register-container {
+    margin: 0;
+    max-height: max-content;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .register-container {
+    h2 {
+      font-size: 40px !important;
+    }
+    button {
+      margin: 10px !important;
+      width: 60% !important;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px !important;
+    }
+  }
+}

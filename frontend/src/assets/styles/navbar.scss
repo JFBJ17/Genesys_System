@@ -16,6 +16,7 @@ header {
     display: flex;
     flex-direction: row;
     list-style: none;
+    align-items: center;
 
     li {
       margin: 0 20px;
@@ -23,11 +24,41 @@ header {
       font-weight: 500;
       font-size: 24px;
       text-shadow: 1px 1px 0 #bcbcbc;
+      text-align: center;
 
       a {
         text-decoration: none;
         color: #18191f;
       }
+    }
+  }
+}
+
+//Media queries
+@media only screen and (max-width: 580px) {
+  header {
+    ul {
+      padding: 0;
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .logo {
+    height: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  header {
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+    .logo {
+      height: 40px !important;
     }
   }
 }
