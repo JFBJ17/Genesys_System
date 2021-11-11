@@ -1,13 +1,15 @@
 import React from "react";
-import Footer from "../components/Footer";
 
 //Components
 import Navbar from '../components/Navbar';
+import Footer from "../components/Footer";
+import MenuLateral from "../components/MenuLateral";
 
 const LayoutClient: React.FC = ({ children, ...rest }) => {
   return (
     <>
       <Navbar />
+      <MenuLateral />
       {children}
       <Footer />
     </>
