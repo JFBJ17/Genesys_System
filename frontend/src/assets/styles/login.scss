@@ -29,11 +29,9 @@
       margin: 50px auto;
       padding: 30px;
       width: 530px;
-      height: 80%;
+      height: 88%;
       min-height: 240px;
-      max-height: 600px;
-      border: 2px solid #000000;
-
+      max-height: 620px;
       overflow: auto;
       scrollbar-width: thin;
       scrollbar-gutter: stable;
@@ -121,17 +119,9 @@
 }
 
 //Media queries
-@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 1420px) {
   .picture {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 610px) {
-  .login-container {
-    .login {
-      border: none !important;
-    }
   }
 }
 
