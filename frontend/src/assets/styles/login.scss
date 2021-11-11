@@ -3,6 +3,7 @@
   height: calc(100vh - 90px);
   width: 100%;
   color: #2d3748;
+
   .picture {
     //display: none;
     flex: 1;
@@ -123,5 +124,70 @@
 @media only screen and (max-width: 1620px) {
   .picture {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .login-container {
+    .login {
+      border: none !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .login-container {
+    .login {
+      width: 400px !important;
+      padding: 0 30px !important;
+      height: 100%;
+
+      .title {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .login-container {
+    .login {
+      width: 350px !important;
+      height: 100%;
+      .greeting {
+        font-size: 15px !important;
+      }
+      .title {
+        font-size: 30px !important;
+      }
+      form {
+        .input-label {
+          font-size: 16px !important;
+        }
+        .input-field {
+          padding: 5px !important;
+
+          font-size: 14px !important;
+        }
+        .forgot-password {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+
+          .checkbox {
+            width: 15px !important;
+            height: 15px !important;
+          }
+        }
+      }
+      button {
+        font-size: 16px !important;
+      }
+      .google {
+        font-size: 14px !important;
+      }
+      .not-singed-up {
+        font-size: 16px !important;
+      }
+    }
   }
 }

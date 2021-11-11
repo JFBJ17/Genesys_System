@@ -30,14 +30,20 @@ const Login = () => {
             </label>
             <label className='input-label'>
               Contraseña
-              <input className='input-field' type='password' placeholder="contraseña"/>
+              <input
+                className='input-field'
+                type='password'
+                placeholder='contraseña'
+              />
             </label>
             <div className='forgot-password'>
               <label>
                 <input type='checkbox' className='checkbox' />
                 Recordar contraseña
               </label>
-              <Link to='/'>¿Ha olvidado su contraseña?</Link>
+              <Link className='password-link' to='/'>
+                ¿Ha olvidado su contraseña?
+              </Link>
             </div>
             <button type='submit'>Iniciar Sesión</button>
           </form>
