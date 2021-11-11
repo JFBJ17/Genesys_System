@@ -20,7 +20,7 @@ a {
   flex-wrap: wrap;
   margin-right: 2.8rem;
 }
-button {
+.container-button__download > button {
   margin: 10px 0;
   padding: 10px 5px;
   width: 30vh;
@@ -37,7 +37,7 @@ button {
   -o-transition: box-shadow 0.5s ease-out 100ms;
 }
 
-button:hover {
+.container-button__download > button:hover {
   box-shadow: 7px 7px 3px #aaaaaa;
 }
 

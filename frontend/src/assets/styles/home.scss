@@ -1,0 +1,33 @@
+.container-home {
+    height: 80vh;
+    overflow: hidden;
+    background-image: url("../img/fondo-home.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-welcome {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #ffffff;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-decoration: underline;
+}
