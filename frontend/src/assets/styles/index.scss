@@ -1,7 +1,7 @@
-:root{
-  --verde_claro:#04c35c;
-  --azul_fosforescente:#291CB4;
-  --azul_oscuro:#110D3D;
+:root {
+  --verde_claro: #04c35c;
+  --azul_fosforescente: #291cb4;
+  --azul_oscuro: #110d3d;
 }
 
 * {
@@ -9,9 +9,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+body > #root {
+  height: 100vh;
+}
+.align-box {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,  'Roboto','Segoe UI',
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +48,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--azul_oscuro);
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

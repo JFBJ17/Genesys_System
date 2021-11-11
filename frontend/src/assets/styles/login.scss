@@ -1,6 +1,7 @@
 .main-container {
   display: flex;
   height: calc(100vh - 90px);
+  width: 100%;
   color: #2d3748;
   .picture {
     //display: none;
@@ -10,7 +11,7 @@
 
   @for $i from 1 through 3 {
     .background_#{$i} {
-      background: url(../img/background_#{$i}.jpg);
+      background: url(../img/background_#{$i}.png);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -20,13 +21,26 @@
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .login {
       box-sizing: border-box;
       margin: 50px auto;
       padding: 30px;
       width: 530px;
+      height: 80%;
+      min-height: 240px;
+      max-height: 600px;
       border: 2px solid #000000;
+
+      overflow: auto;
+      scrollbar-width: thin;
+      scrollbar-gutter: stable;
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #7e7e80;
+        border-radius: 100px;
+      }
 
       .greeting {
         font-size: 20px;
