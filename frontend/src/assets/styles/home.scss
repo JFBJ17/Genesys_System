@@ -31,3 +31,13 @@
     font-size: 3.5rem;
     text-decoration: underline;
 }
+
+.btn-ver {
+    width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn-ver {
+        width: 50%;
+    }
+}

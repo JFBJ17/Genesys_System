@@ -14,7 +14,7 @@ function ListProduct(props: Props) {
                 <h3>{props.title}</h3>
             </div>
             <div className="card-body">
-                <img className="img-card" src="https://picsum.photos/70/40" alt="producto" />
+                <img className="img-card" src="https://picsum.photos/305/174" alt="producto" />
                 <span className="fw-bold d-block my-3">Precio: ${props.price}</span>
                 <button className="btn btn-success d-block w-100">Agregar</button>
             </div>
