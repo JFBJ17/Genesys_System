@@ -4,10 +4,14 @@ import App from './router/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import 'react-toastify/dist/ReactToastify.css';
+import { UsuarioProvider } from './context/user-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UsuarioProvider>
+      <App />
+    </UsuarioProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

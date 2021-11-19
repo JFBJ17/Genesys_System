@@ -2,7 +2,9 @@
   position: relative;
   margin: auto;
   width: 480px;
-  height: 88%;
+  /* height: 88%; */
+  height: 100%; // agregado por Joseph
+  padding: 2rem 0; // agregado por Joseph
   min-height: 240px;
   max-height: 700px;
   overflow: hidden;
@@ -118,4 +120,5 @@
       font-size: 14px !important;
     }
   }
+
 }

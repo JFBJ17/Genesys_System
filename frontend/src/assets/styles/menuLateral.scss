@@ -3,6 +3,7 @@
     height: auto;
     background-image: linear-gradient(var(--azul_fosforescente), var(--azul_oscuro));
     position: fixed;
+    z-index: 1000;
     top: 8rem;
     z-index: 1000;
     border-radius: 0 .7rem .7rem 0;
@@ -21,6 +22,7 @@
     color: #ffffff;
     font-size: 1.5rem;
     position: fixed;
+    z-index: 1000;
     top: 8rem;
     cursor: pointer;
     border-radius: 0 .7rem .7rem 0;

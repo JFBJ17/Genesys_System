@@ -2,6 +2,7 @@
   --verde_claro: #04c35c;
   --azul_fosforescente: #291cb4;
   --azul_oscuro: #110d3d;
+  --blanco_opaco: #faf9f9;
 }
 
 * {
@@ -20,15 +21,17 @@ body > #root {
 .align-box {
   display: flex;
   width: 100%;
-  height: calc(100vh - 90px);
+  /* height: calc(100vh - 90px); */
+  height: 90vh; // agregado por Joseph
+  margin: 2rem 0; // agregado por Joseph
   justify-content: center;
   align-items: center;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,12 +58,19 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'),
-    url(../fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+// agregado port Joseph
+@media only screen and (max-width: 500px) {
+  .align-box {
+    margin: 0;
+  }
 }
