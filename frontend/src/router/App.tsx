@@ -13,6 +13,7 @@ import '../assets/styles/index.scss';
 import LayoutClient from '../partials/LayoutClient';
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Routes>
