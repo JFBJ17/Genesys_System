@@ -1,16 +1,28 @@
-//Router
+// Router
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-//Pages
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
+// Pages Client
+import Home from '../pages/Client/Home';
+import Login from '../pages/Client/Login';
+import Register from '../pages/Client/Register';
 import NotFound from '../pages/NotFound';
-import ReporteCompras from '../pages/ReporteCompras';
+import ReporteCompras from '../pages/Client/ReporteCompras';
 
-//Style
+// Pages Admin
+import AdminLogin from '../pages/Admin/AdminLogin';
+import DashboardProductos from '../pages/Admin/DashboardProductos'
+
+// Style
 import '../assets/styles/index.scss';
+
+// Toastify
+import { ToastContainer } from 'react-toastify';
+
+// Layouts
 import LayoutClient from '../partials/LayoutClient';
+import LayoutAdmin from './../partials/LayoutAdmin';
+import DashboardCategoria from '../pages/Admin/DashboardCategoria';
+
 
 const App = () => {
 
@@ -36,6 +48,22 @@ const App = () => {
           <LayoutClient>
             <ReporteCompras />
           </LayoutClient>
+        } />
+        <Route path='dashboard' element={
+          <LayoutAdmin>
+            <DashboardProductos />
+          </LayoutAdmin>
+        } />
+        <Route path='dashboard/categorias' element={
+          <LayoutAdmin>
+            <DashboardCategoria />
+          </LayoutAdmin>
+        } />
+        <Route path='/dashboard/login' element={
+          <>
+            <ToastContainer theme={"colored"} />
+            <AdminLogin />
+          </>
         } />
         <Route path='*' element={<NotFound />} />
       </Routes>

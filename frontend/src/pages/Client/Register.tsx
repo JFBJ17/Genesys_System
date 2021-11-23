@@ -4,10 +4,10 @@ import { AiOutlineCheckCircle } from 'react-icons/ai';
 import { toast } from 'react-toastify'
 
 //Style
-import '../assets/styles/register.scss';
+import '../../assets/styles/register.scss';
 
 // Services
-import * as Auth from '../services/auth'
+import * as Auth from '../../services/auth'
 
 const Register = () => {
 

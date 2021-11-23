@@ -8,10 +8,10 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify'
 
 //Style
-import '../assets/styles/login.scss';
+import '../../assets/styles/login.scss';
 
 // Services
-import * as Auth from '../services/auth';
+import * as Auth from '../../services/auth';
 
 const Login = () => {
 

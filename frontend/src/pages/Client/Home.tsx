@@ -1,5 +1,5 @@
-import '../assets/styles/home.scss';
-import ListProduct from '../components/ListProduct';
+import '../../assets/styles/home.scss';
+import ListProduct from '../../components/ListProduct';
 
 const Home = () => {
   return (

@@ -9,6 +9,8 @@ import './lib/passport'
 // Routes
 import home from './routes/client/home.routes'
 import auth from './routes/client/auth.routes'
+import authAdm from './routes/admin/authAdm.routes'
+import category from './routes/admin/category.routes';
 
 export default class App {
 
@@ -26,8 +28,10 @@ export default class App {
     }
 
     routes() {
-        this.app.use('/api/v0', auth)
-        this.app.use('/api/v0', home)
+        this.app.use('/api/v0', category);
+        this.app.use('/api/v0', authAdm);
+        this.app.use('/api/v0', auth);
+        this.app.use('/api/v0', home);
     }
 
     middlewares() {

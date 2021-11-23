@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import '../assets/styles/reporteCompras.scss';
+import '../../assets/styles/reporteCompras.scss';
 import { BsFillCartFill } from "react-icons/bs";
 import DataTable from 'react-data-table-component';
 import jsPDF from 'jspdf';

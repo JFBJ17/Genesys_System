@@ -1,0 +1,9 @@
+.btn-header_dash {
+    width: 15rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .btn-header_dash {
+        width: 10rem;
+    }
+}

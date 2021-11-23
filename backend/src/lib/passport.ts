@@ -47,6 +47,21 @@ passport.use('local.signin', new LocalStrategy({
     done(null, datos, { message: `Bienvenido ${datos.username}` })
 }));
 
+// ADMINISTRADOR
+passport.use('local.signinAdm', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password'
+}, async (email, password, done) => {
+    const conn = await connect();
+    const [rows]: any = await conn.query('SELECT * FROM user WHERE email = ? and id_Rol=1 or id_Rol=2', [email]);
+    console.log(rows)
+    if (rows.length === 0) return done(null, false, { message: 'No esta registrado' });
+    const datos = rows[0];
+    const validPassword = await helpers.matchPassword(password, datos.password);
+    if (!validPassword) return done(null, false, { message: 'Contraseña incorrecta' });
+    done(null, datos, { message: `Bienvenido ${datos.username}` })
+}));
+
 passport.serializeUser((user: any, done) => {
     done(null, user.email);
 });
