@@ -22,6 +22,7 @@ import { ToastContainer } from 'react-toastify';
 import LayoutClient from '../partials/LayoutClient';
 import LayoutAdmin from './../partials/LayoutAdmin';
 import DashboardCategoria from '../pages/Admin/DashboardCategoria';
+import DashboardCriterios from './../pages/Admin/DashboardCriterios';
 
 
 const App = () => {
@@ -57,6 +58,11 @@ const App = () => {
         <Route path='dashboard/categorias' element={
           <LayoutAdmin>
             <DashboardCategoria />
+          </LayoutAdmin>
+        } />
+        <Route path='dashboard/criterios' element={
+          <LayoutAdmin>
+            <DashboardCriterios />
           </LayoutAdmin>
         } />
         <Route path='/dashboard/login' element={

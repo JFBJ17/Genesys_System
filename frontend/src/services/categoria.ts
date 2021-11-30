@@ -14,3 +14,7 @@ export const allCategory = () => {
 export const deleteCategory = (id: string) => {
     return axios.delete(`${API}category/${id}`);
 }
+
+export const editCategory = (categoria: Categoria, id: string) => {
+    return axios.put(`${API}category/${id}`, categoria);
+}

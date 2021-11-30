@@ -1,13 +1,15 @@
 import React, { ChangeEvent, useRef } from 'react'
-import * as ctgaServices from '../../services/categoria';
+import * as ctgaServices from '../../services/criterio';
 import { toast } from 'react-toastify';
 import { Categoria } from '../../interfaces/categoria.interface';
+import { Criterio } from '../../interfaces/criterio.interface';
 
 interface Props {
     initialStateDataModal: object;
     initialState: object;
-    setProducto: any;
-    producto: Categoria;
+    setCriterio: any;
+    criterio: Criterio;
+    category: Array<Categoria>;
     data: any;
     modalBtn: boolean;
     setData: any;
@@ -15,13 +17,13 @@ interface Props {
     reloadTable?: () => void;
 }
 
-function ModalCategoria(props: Props) {
+function ModalCriterio(props: Props) {
 
     const btnCloseRef = useRef<HTMLButtonElement>(null);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        props.setProducto({
-            ...props.producto,
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        props.setCriterio({
+            ...props.criterio,
             [e.target.name]: e.target.value
         });
     }
@@ -29,7 +31,7 @@ function ModalCategoria(props: Props) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (props.data.id_Categoria) {
-            const res = await ctgaServices.editCategory(props.producto, props.data.id_Categoria);
+            const res = await ctgaServices.editCriterio(props.criterio, props.data.id_Criterio);
             toast.success(res.data.message);
             props.setData(props.initialStateDataModal)
             props.reloadTable();
@@ -37,9 +39,9 @@ function ModalCategoria(props: Props) {
             return;
         }
         try {
-            const res = await ctgaServices.addCategory(props.producto);
+            const res = await ctgaServices.addCriterio(props.criterio);
             toast.success(res.data.message);
-            props.setProducto(props.initialState);
+            props.setCriterio(props.initialState);
             props.reloadTable();
             btnCloseRef.current.click();
         } catch (error) {
@@ -52,20 +54,35 @@ function ModalCategoria(props: Props) {
             <div className="modal-dialog">
                 <form className="modal-content" onSubmit={handleSubmit}>
                     <div className="modal-header">
-                        <h5 className="modal-title" id="staticBackdropLabel">{props.modalBtn ? "Agregar Categoría" : "Editar Categoría"}</h5>
+                        <h5 className="modal-title" id="staticBackdropLabel">{props.modalBtn ? "Agregar Criterio" : "Editar Criterio"}</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => {
                             props.setModalBtn(true);
-                            props.setProducto(props.initialState)
+                            props.setCriterio(props.initialState)
                         }} />
                     </div>
                     <div className="modal-body">
                         <div className="mb-3">
                             <label htmlFor="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" className="form-control" value={props.producto.nombre} onChange={handleChange} />
+                            <input type="text" name="nombre" id="nombre" className="form-control" value={props.criterio.nombre} onChange={handleChange} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" className="form-control" value={props.producto.descripcion} rows={10} onChange={handleChange}></textarea>
+                            <textarea name="descripcion" id="descripcion" className="form-control" value={props.criterio.descripcion} rows={10} onChange={handleChange}></textarea>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="porcentaje">Porcentaje(%)</label>
+                            <input type="number" value={props.criterio.porcentaje} name="porcentaje" min={0} max={100} className="form-control" onChange={handleChange} />
+                        </div>
+                        <div className="mb-3">
+                            <select name="id_Categoria" value={props.criterio.id_Categoria} className="form-select" aria-label="Default select example" onChange={handleChange}>
+                                {
+                                    props.category.map(element => {
+                                        return (
+                                            <option key={element.id_Categoria} value={element.id_Categoria}>{element.nombre}</option>
+                                        );
+                                    })
+                                }
+                            </select>
                         </div>
                     </div>
                     <div className="modal-footer">
@@ -75,7 +92,7 @@ function ModalCategoria(props: Props) {
                             data-bs-dismiss="modal"
                             onClick={() => {
                                 props.setModalBtn(true);
-                                props.setProducto(props.initialState);
+                                props.setCriterio(props.initialState);
                             }}
                             ref={btnCloseRef}
                         >
@@ -94,4 +111,4 @@ function ModalCategoria(props: Props) {
     )
 }
 
-export default ModalCategoria
+export default ModalCriterio
